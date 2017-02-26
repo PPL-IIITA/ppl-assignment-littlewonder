@@ -26,4 +26,4 @@ _open *question1_Output.txt* to see the results_
 </code></pre>
 _open *question2_Output.txt* to see the results_
 
-###Documentation Available in documentation/index.html
+###[Click Here for the Documentation](https://github.com/PPL-IIITA/ppl-assignment-littlewonder/blob/master/Documentation/index.html)
