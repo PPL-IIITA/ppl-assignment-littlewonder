@@ -25,3 +25,5 @@ _open *question1_Output.txt* to see the results_
 <pre><code> node question2.js
 </code></pre>
 _open *question2_Output.txt* to see the results_
+
+###Documentation Available in documentation/index.html
