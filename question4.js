@@ -239,29 +239,21 @@ function GeekDesperate(i){
     couplelist[i].girl.happiness=(Math.exp(totalcost));
 }
 
-
-
-/**Storing the output in a string */
-var FinalString  = "";
-var item = 0;
-
-for(count=0;count<couplelist.length;count++){
-FinalString = FinalString + "Couple Number" + " " + couplelist[count].id + '\n' +
-            " " + "Girlfriend: "+ " " + couplelist[count].girl.naam + '\n' +
-            " " + "Boyfriend: "+" " + couplelist[count].boy.naam + '\n' +
-             " " + "Happiness Rating:" + " " + couplelist[count].HappinessRating + '\n' +
-            " " + "Compatibility Value:" + " " + couplelist[count].CompatibilityValue+ '\n' + " " + "Gifts:" +'\n'
- for(item=0;item<couplelist[count].gift.length;item++){
-     FinalString=FinalString+" " + couplelist[count].gift[item].name + '\n';
+var finalString = "";
+for (i = 1; i < couplelist.length; i++) {
+    if (couplelist[i].HappinessRating < couplelist[i-1].HappinessRating) {
+        couplelist[i].boy.status = "single";
+        couplelist[i].girl.status = "single";
+        var temp = new Date();
+        finalString = finalString+"BreakUp at" + " "+  temp + " between" + couplelist[i].boy.naam + " and " + couplelist[i].girl.naam + '\n';
     }
-    FinalString = FinalString + "------------------"+'\n';
 }
-/**Writing the String output File */
+
 var fs = require('fs');
-fs.writeFile("./question2_Output.txt", FinalString, function(err) {
+fs.writeFile("./question4_Output.txt", finalString, function(err) {
     if(err) {
         return console.log(err);
     }
 
-    console.log("File Saved to question2_Output.txt!");
+    console.log("File Saved to question4_Output.txt!");
 }); 

@@ -244,24 +244,31 @@ function GeekDesperate(i){
 /**Storing the output in a string */
 var FinalString  = "";
 var item = 0;
-
+var k = 0;
 for(count=0;count<couplelist.length;count++){
-FinalString = FinalString + "Couple Number" + " " + couplelist[count].id + '\n' +
+    if(k%4==0){
+        FinalString = FinalString+ "Day:" +k +'\n'+'------------------'+'\n';
+    }
+    FinalString = FinalString + "Couple Number" + " " + couplelist[count].id + '\n' +
             " " + "Girlfriend: "+ " " + couplelist[count].girl.naam + '\n' +
             " " + "Boyfriend: "+" " + couplelist[count].boy.naam + '\n' +
              " " + "Happiness Rating:" + " " + couplelist[count].HappinessRating + '\n' +
             " " + "Compatibility Value:" + " " + couplelist[count].CompatibilityValue+ '\n' + " " + "Gifts:" +'\n'
+
  for(item=0;item<couplelist[count].gift.length;item++){
      FinalString=FinalString+" " + couplelist[count].gift[item].name + '\n';
     }
-    FinalString = FinalString + "------------------"+'\n';
+    FinalString = FinalString + "##"+'\n';
+    k++;
 }
 /**Writing the String output File */
 var fs = require('fs');
-fs.writeFile("./question2_Output.txt", FinalString, function(err) {
+fs.writeFile("./question6_Output.txt", FinalString, function(err) {
     if(err) {
         return console.log(err);
     }
 
-    console.log("File Saved to question2_Output.txt!");
+    console.log("File Saved to question6_Output.txt!");
 }); 
+
+module.exports = {couplelist};
