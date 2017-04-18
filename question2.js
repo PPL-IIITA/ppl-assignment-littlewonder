@@ -132,7 +132,12 @@ function MiserNormal(i) {
     let pos;
     var BoyBudget = couplelist[i].boy.budget;
     var sortedgiftlist = giftlist.sort(function (a, b) {
-        return (b.price - a.price);
+        try {
+            return (b.price - a.price);
+        }
+        catch (e) {
+            alert("Error: " + e.description);
+        }
     });
     var totalcost = 0;
     for (pos = 0; pos < sortedgiftlist.length; pos++) {
@@ -152,7 +157,12 @@ function MiserDesperate(i) {
     let pos;
     var BoyBudget = couplelist[i].boy.budget;
     var sortedgiftlist = giftlist.sort(function (a, b) {
-        return (b.price - a.price);
+        try {
+            return (b.price - a.price);
+        }
+        catch (e) {
+            alert("Error: " + e.description);
+        }
     });
     var totalcost = 0;
     for (pos = 0; pos < sortedgiftlist.length; pos++) {
@@ -172,7 +182,12 @@ function GenerousChoosy(i) {
     let pos;
     var BoyBudget = couplelist[i].boy.budget;
     var sortedgiftlist = giftlist.sort(function (a, b) {
-        return (b.price - a.price);
+        try {
+            return (b.price - a.price);
+        }
+        catch (e) {
+            alert("Error: " + e.description);
+        }
     });
     var totalcost = 0;
     for (pos = 0; pos < sortedgiftlist.length; pos++) {
@@ -192,7 +207,12 @@ function GenerousNormal(i) {
     let pos;
     var BoyBudget = couplelist[i].boy.budget;
     var sortedgiftlist = giftlist.sort(function (a, b) {
-        return (b.price - a.price);
+        try {
+            return (b.price - a.price);
+        }
+        catch (e) {
+            alert("Error: " + e.description);
+        }
     });
     var totalcost = 0;
     for (pos = 0; pos < sortedgiftlist.length; pos++) {
@@ -212,7 +232,12 @@ function GenerousDesperate(i) {
     let pos;
     var BoyBudget = couplelist[i].boy.budget;
     var sortedgiftlist = giftlist.sort(function (a, b) {
-        return (b.price - a.price);
+        try {
+            return (b.price - a.price);
+        }
+        catch (e) {
+            alert("Error: " + e.description);
+        }
     });
     var totalcost = 0;
     for (pos = 0; pos < sortedgiftlist.length; pos++) {
@@ -232,7 +257,12 @@ function GeekChoosy(i) {
     let pos;
     var BoyBudget = couplelist[i].boy.budget;
     var sortedgiftlist = giftlist.sort(function (a, b) {
-        return (a.price - b.price);
+        try {
+            return (a.price - b.price);
+        }
+        catch (e) {
+            alert("Error: " + e.description);
+        }
     });
     var totalcost = 0;
     for (pos = 0; pos < sortedgiftlist.length; pos++) {
@@ -252,7 +282,12 @@ function GeekNormal(i) {
     let pos;
     var BoyBudget = couplelist[i].boy.budget;
     var sortedgiftlist = giftlist.sort(function (a, b) {
-        return (a.price - b.price);
+        try {
+            return (a.price - b.price);
+        }
+        catch (e) {
+            alert("Error: " + e.description);
+        }
     });
     var totalcost = 0;
     for (pos = 0; pos < sortedgiftlist.length; pos++) {
@@ -275,7 +310,12 @@ function GeekDesperate(i) {
     let pos;
     var BoyBudget = couplelist[i].boy.budget;
     var sortedgiftlist = giftlist.sort(function (a, b) {
-        return (a.price - b.price);
+        try {
+            return (a.price - b.price);
+        }
+        catch (e) {
+            alert("Error: " + e.description);
+        }
     });
     var totalcost = 0;
     for (pos = 0; pos < sortedgiftlist.length; pos++) {
